@@ -174,7 +174,7 @@ if __name__ == '__main__':
     def handle_exception(engine, e):
         writer.close()
         engine.terminate()
-        if isinstance(e, KeyboardInterrupt) and (engine.state.iteration > 1):
+        if isinstance(e, KeyboardInterrupt) and (engine.state.iteration > 0):
             import warnings
             warnings.warn('KeyboardInterrupt caught. Exiting gracefully.')
             checkpoint_handler(engine, { 'model_exception': model })

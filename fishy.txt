@@ -1,0 +1,24 @@
+Error 1:
+['/home/nishanth/miniconda3/envs/gqn/bin/python', '-m', 'pip', 'install', '-U', '-r', '/home/nishanth/Desktop/generative-query-network-pytorch/condaenv.rr0fcobh.requirements.txt']
+Pip subprocess output:
+Collecting nvidia-ml-py==375.53.1 (from -r /home/nishanth/Desktop/generative-query-network-pytorch/condaenv.rr0fcobh.requirements.txt (line 1))
+
+Pip subprocess error:
+  Could not find a version that satisfies the requirement nvidia-ml-py==375.53.1 (from -r /home/nishanth/Desktop/generative-query-network-pytorch/condaenv.rr0fcobh.requirements.txt (line 1)) (from versions: 1.0, 2.285.1, 3.295.0, 4.304.2, 4.304.3, 4.304.4, 6.340.0, 7.346.0, 7.352.0, 10.418.84, 11.450.51, 375.53)
+No matching distribution found for nvidia-ml-py==375.53.1 (from -r /home/nishanth/Desktop/generative-query-network-pytorch/condaenv.rr0fcobh.requirements.txt (line 1))
+You are using pip version 10.0.1, however version 20.2.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+failed
+
+CondaEnvException: Pip failed
+
+
+Note 2:
+We commented out the line
+#   - pytorch-nightly=1.0.0.dev20181010=py3.5_cuda9.0.176_cudnn7.1.2_0
+from environments.yml
+
+Note 3:
+Every time we try to train the GQN and kill it with Ctrl-C, a zombie TensorBoard Process is
+left on port 6006, this needs to be manually pkilled before the next attempt can be run...

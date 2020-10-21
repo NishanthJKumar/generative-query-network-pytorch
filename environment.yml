@@ -33,7 +33,7 @@ dependencies:
   - tensorflow-gpu=1.10.0=hf154084_0
   - ignite=0.1.1=py35_0
   - pytorch=1.0.0=py3.5_cuda9.0.176_cudnn7.4.1_1
-  - pytorch-nightly=1.0.0.dev20181010=py3.5_cuda9.0.176_cudnn7.1.2_0
+  # - pytorch-nightly=1.0.0.dev20190328=py3.6_cuda9.0.176_cudnn7.4.2_0
   - torchvision=0.2.1=py_2
   - pip:
     - nvidia-ml-py==375.53.1
@@ -42,4 +42,4 @@ dependencies:
     - tensorboardx==1.6
     - torch==1.0.0
 prefix: ~/.conda/envs/gqn
-
+#   - pytorch-nightly=1.0.0.dev20181010=py3.5_cuda9.0.176_cudnn7.1.2_0
